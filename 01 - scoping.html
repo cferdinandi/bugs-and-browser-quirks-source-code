@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Scoping</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Styles -->
+		<style type="text/css">
+			body {
+				max-width: 40em;
+				width: 88%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<p>Hello, world!</p>
+
+
+		<!-- Scripts -->
+		<script>
+			var sandwich = 'turkey';
+			var snack = 'chips';
+
+			console.log(sandwich); // "turkey"
+			console.log(snack); // "chips"
+
+			var updateLunch = function () {
+				var sandwich = 'tuna';
+				snack = 'carrots';
+				var dessert = 'ice cream';
+
+				console.log(sandwich); // "tuna"
+				console.log(snack); // "carrots"
+				console.log(dessert); // "ice cream"
+			};
+
+			updateLunch();
+
+			console.log(sandwich); // "turkey"
+			console.log(snack); // "carrots"
+			console.log(dessert); // undefined
+		</script>
+	</body>
+</html>
